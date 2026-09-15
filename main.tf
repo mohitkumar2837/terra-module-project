@@ -28,7 +28,7 @@ module "dev-app" {
 module "prd-app" {
   source        = "./my_app_infra_module"
   my_env        = "prd"
-  instance_type = "t2.medium"
+  instance_type = "t2.micro"
   ami           = data.aws_ami.ubuntu.id
 }
 
