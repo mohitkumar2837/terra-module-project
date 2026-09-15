@@ -13,7 +13,7 @@ variable "instance_type" {
   type        = string
 
   validation {
-    condition     = can(regex("^t[2]\\.", var.instance_type))
+    condition     = can(regex("^t[23]\\.", var.instance_type))
     error_message = "Instance type must be a t2 or t3 family instance."
   }
 }
