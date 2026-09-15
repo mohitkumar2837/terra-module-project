@@ -20,7 +20,7 @@ data "aws_ami" "ubuntu" {
 module "dev-app" {
   source        = "./my_app_infra_module"
   my_env        = "dev"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   ami           = data.aws_ami.ubuntu.id
 }
 
@@ -28,7 +28,7 @@ module "dev-app" {
 module "prd-app" {
   source        = "./my_app_infra_module"
   my_env        = "prd"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   ami           = data.aws_ami.ubuntu.id
 }
 
@@ -36,7 +36,7 @@ module "prd-app" {
 module "stg-app" {
   source        = "./my_app_infra_module"
   my_env        = "stg"
-  instance_type = "t2.small"
+  instance_type = "t3.small"
   ami           = data.aws_ami.ubuntu.id
 }
 
