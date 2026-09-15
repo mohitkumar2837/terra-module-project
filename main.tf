@@ -2,7 +2,7 @@
 # AMI IDs differ by region and change over time — a data source
 # always fetches the latest available image automatically.
 data "aws_ami" "ubuntu" {
-  owners      = ["619336173002"]
+  owners      = ["099720109477"]
   most_recent = true
 
   filter {
