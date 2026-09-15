@@ -49,7 +49,7 @@ resource "aws_security_group" "allow_user_to_connect" {
 }
 
 resource "aws_instance" "my_app_server" {
-  count                  = 2
+  count                  = 1
   ami                    = var.ami
   instance_type          = var.instance_type
   key_name               = aws_key_pair.deployer.key_name
